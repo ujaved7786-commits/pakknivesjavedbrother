@@ -424,3 +424,14 @@ width:38px;
 height:38px;
 }
 l
+#featured{
+background:#111;
+}
+
+#featured .card{
+min-height:260px;
+}
+
+#featured .button{
+margin-top:15px;
+}

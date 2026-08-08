@@ -716,3 +716,77 @@ margin:0 auto 30px;
     }
 
 }
+/* =================================
+   PRODUCT SEARCH & FILTER
+================================= */
+
+.product-tools{
+
+max-width:900px;
+
+margin:0 auto 40px;
+
+display:flex;
+
+gap:15px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+.product-tools input,
+.product-tools select{
+
+padding:15px;
+
+background:#171717;
+
+color:#fff;
+
+border:1px solid #555;
+
+border-radius:8px;
+
+font-size:16px;
+
+outline:none;
+
+}
+
+.product-tools input{
+
+width:350px;
+
+}
+
+.product-tools select{
+
+min-width:220px;
+
+}
+
+.product-tools input:focus,
+.product-tools select:focus{
+
+border-color:#d4af37;
+
+}
+
+@media(max-width:600px){
+
+.product-tools{
+
+flex-direction:column;
+
+}
+
+.product-tools input,
+.product-tools select{
+
+width:100%;
+
+}
+
+}

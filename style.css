@@ -624,3 +624,24 @@ font-size:18px;
 font-weight:bold;
 letter-spacing:2px;
 }
+/* PRODUCT DETAIL */
+
+.product-detail{
+max-width:750px;
+margin:auto;
+}
+
+.product-detail p{
+text-align:left;
+padding:8px 0;
+border-bottom:1px solid #333;
+}
+
+.product-detail strong{
+color:#d4af37;
+}
+
+.product-detail .gallery-placeholder{
+max-width:500px;
+margin:0 auto 30px;
+}

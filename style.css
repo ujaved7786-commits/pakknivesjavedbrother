@@ -272,3 +272,334 @@ width:220px;
 margin:15px auto;
 text-align:center;
 }
+/* =================================
+   PRODUCT & CONTENT CARDS
+================================= */
+
+.products{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+.card{
+background:#171717;
+border:1px solid #333;
+border-radius:12px;
+padding:28px;
+text-align:center;
+transition:0.3s ease;
+box-shadow:0 5px 20px rgba(0,0,0,0.35);
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#d4af37;
+box-shadow:0 10px 30px rgba(212,175,55,0.18);
+}
+
+.card h3{
+color:#d4af37;
+font-size:23px;
+margin-bottom:12px;
+}
+
+.card h4{
+color:#aaa;
+margin-top:12px;
+}
+
+.card p{
+color:#ddd;
+font-size:16px;
+margin-bottom:8px;
+}
+
+.card .button{
+margin-top:15px;
+font-size:14px;
+padding:11px 24px;
+}
+
+/* =================================
+   ABOUT SECTION
+================================= */
+
+#about{
+background:#111;
+}
+
+#about p{
+max-width:1000px;
+margin:0 auto 20px;
+text-align:center;
+color:#ddd;
+font-size:18px;
+}
+
+/* =================================
+   MANUFACTURING
+================================= */
+
+#manufacturing{
+background:#0d0d0d;
+}
+
+#manufacturing .card{
+min-height:220px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+/* =================================
+   STEEL MATERIALS
+================================= */
+
+#materials{
+background:#111;
+}
+
+#materials .card{
+padding:22px;
+}
+
+#materials .card h3{
+margin:0;
+}
+
+/* =================================
+   WHY CHOOSE US
+================================= */
+
+#why-us{
+background:#0d0d0d;
+}
+
+#why-us .card{
+min-height:190px;
+}
+
+/* =================================
+   EXPORT MARKETS
+================================= */
+
+#export{
+background:#111;
+}
+
+#export p{
+max-width:1100px;
+margin:auto;
+color:#ddd;
+line-height:2.5;
+}
+
+/* =================================
+   REVIEWS
+================================= */
+
+#reviews{
+background:#0d0d0d;
+}
+
+#reviews .card{
+min-height:190px;
+}
+
+#reviews .card h3{
+font-size:24px;
+color:#d4af37;
+}
+
+/* =================================
+   FAQ
+================================= */
+
+#faq{
+background:#111;
+}
+
+#faq .card{
+max-width:1000px;
+margin:auto;
+text-align:left;
+}
+
+#faq h3{
+margin-top:18px;
+color:#d4af37;
+}
+
+#faq h3:first-child{
+margin-top:0;
+}
+
+/* =================================
+   CONTACT
+================================= */
+
+#contact{
+background:#0d0d0d;
+}
+
+#contact .card{
+max-width:700px;
+margin:auto;
+text-align:center;
+}
+
+#contact a{
+color:#d4af37;
+text-decoration:none;
+}
+
+#contact a:hover{
+color:#fff;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer{
+background:#000;
+border-top:2px solid #d4af37;
+text-align:center;
+padding:45px 20px;
+}
+
+footer h2{
+color:#d4af37;
+margin-bottom:15px;
+}
+
+footer p{
+color:#aaa;
+margin:8px 0;
+}
+
+/* =================================
+   WHATSAPP BUTTON
+================================= */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:9999;
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+.whatsapp img{
+width:34px;
+height:34px;
+}
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media(max-width:900px){
+
+header{
+padding:15px 5%;
+}
+
+nav a{
+margin-left:12px;
+font-size:14px;
+}
+
+.hero h1{
+font-size:45px;
+}
+
+.products{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+header{
+position:relative;
+flex-direction:column;
+gap:15px;
+}
+
+.logo h2{
+font-size:23px;
+text-align:center;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:8px;
+}
+
+nav a{
+margin:0;
+font-size:13px;
+}
+
+.hero{
+min-height:90vh;
+height:auto;
+padding:100px 20px 60px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero h3{
+font-size:18px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+section{
+padding:60px 5%;
+}
+
+section h2{
+font-size:32px;
+}
+
+.products{
+grid-template-columns:1fr;
+gap:18px;
+}
+
+.card{
+padding:22px;
+}
+
+.whatsapp{
+width:55px;
+height:55px;
+right:15px;
+bottom:15px;
+}
+
+}

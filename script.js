@@ -117,3 +117,83 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+/* =================================
+   PRODUCT SEARCH
+================================= */
+
+function searchProducts(){
+
+    const searchInput =
+        document.getElementById("productSearch");
+
+    if(!searchInput) return;
+
+    const search =
+        searchInput.value.toLowerCase();
+
+    const cards =
+        document.querySelectorAll("#products .card");
+
+    cards.forEach(function(card){
+
+        const text =
+            card.textContent.toLowerCase();
+
+        if(text.includes(search)){
+
+            card.style.display = "";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* =================================
+   PRODUCT CATEGORY FILTER
+================================= */
+
+function filterProducts(){
+
+    const filter =
+        document.getElementById("categoryFilter");
+
+    if(!filter) return;
+
+    const value =
+        filter.value.toLowerCase();
+
+    const cards =
+        document.querySelectorAll("#products .card");
+
+    cards.forEach(function(card){
+
+        const text =
+            card.textContent.toLowerCase();
+
+        if(value === "all"){
+
+            card.style.display = "";
+
+        }
+
+        else if(text.includes(value)){
+
+            card.style.display = "";
+
+        }
+
+        else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}

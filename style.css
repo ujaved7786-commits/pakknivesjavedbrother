@@ -603,3 +603,24 @@ bottom:15px;
 }
 
 }
+/* =================================
+   GALLERY PLACEHOLDER
+================================= */
+
+.gallery-placeholder{
+height:220px;
+background:#222;
+border:1px dashed #777;
+border-radius:8px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:20px;
+}
+
+.gallery-placeholder span{
+color:#777;
+font-size:18px;
+font-weight:bold;
+letter-spacing:2px;
+}

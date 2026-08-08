@@ -1,31 +1,119 @@
-// Pak Knives Javed Brother Website
+/* =========================================
+   PAK KNIVES JAVED BROTHER
+   WEBSITE JAVASCRIPT
+========================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    console.log("Website Loaded Successfully");
+    /* =====================================
+       SMOOTH SCROLLING
+    ===================================== */
 
-    // Smooth scroll for menu links
-    const links = document.querySelectorAll("nav a");
+    const links = document.querySelectorAll('a[href^="#"]');
 
-    links.forEach(link => {
-        link.addEventListener("click", function (e) {
+    links.forEach(function (link) {
 
-            const target = this.getAttribute("href");
+        link.addEventListener("click", function (event) {
 
-            if (target.startsWith("#")) {
-                e.preventDefault();
+            const targetId = this.getAttribute("href");
 
-                document.querySelector(target).scrollIntoView({
-                    behavior: "smooth"
-                });
+            if (targetId && targetId !== "#") {
+
+                const target = document.querySelector(targetId);
+
+                if (target) {
+
+                    event.preventDefault();
+
+                    target.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
             }
 
         });
+
+    });
+
+
+    /* =====================================
+       SCROLL REVEAL ANIMATION
+    ===================================== */
+
+    const cards = document.querySelectorAll(".card");
+
+    const revealCards = function () {
+
+        const windowHeight = window.innerHeight;
+
+        cards.forEach(function (card) {
+
+            const position = card.getBoundingClientRect().top;
+
+            if (position < windowHeight - 80) {
+
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+
+            }
+
+        });
+
+    };
+
+
+    cards.forEach(function (card) {
+
+        card.style.opacity = "0";
+        card.style.transform = "translateY(30px)";
+        card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+
+    });
+
+    window.addEventListener("scroll", revealCards);
+
+    revealCards();
+
+
+    /* =====================================
+       CURRENT YEAR
+    ===================================== */
+
+    const yearElements = document.querySelectorAll(".current-year");
+
+    yearElements.forEach(function (element) {
+
+        element.textContent = new Date().getFullYear();
+
+    });
+
+
+    /* =====================================
+       REQUEST QUOTE BUTTONS
+    ===================================== */
+
+    const quoteButtons = document.querySelectorAll(".button");
+
+    quoteButtons.forEach(function (button) {
+
+        const text = button.textContent.toLowerCase();
+
+        if (
+            text.includes("request quote") ||
+            text.includes("contact us")
+        ) {
+
+            button.addEventListener("click", function () {
+
+                console.log("Customer is interested in a product.");
+
+            });
+
+        }
+
     });
 
 });
-
-// Welcome Message
-setTimeout(function () {
-    alert("Welcome to Pak Knives Javed Brother");
-}, 1000);

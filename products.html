@@ -55,7 +55,35 @@ in Wazirabad, Pakistan.
 <section id="products">
 
 <h2>Product Categories</h2>
+<!-- PRODUCT SEARCH -->
 
+<div class="product-tools">
+
+<input
+type="text"
+id="productSearch"
+placeholder="Search products..."
+onkeyup="searchProducts()"
+>
+
+<select id="categoryFilter" onchange="filterProducts()">
+
+<option value="all">All Categories</option>
+
+<option value="damascus">Damascus Knives</option>
+<option value="folding">Folding Knives</option>
+<option value="hunting">Hunting Knives</option>
+<option value="bowie">Bowie Knives</option>
+<option value="dagger">Dagger Knives</option>
+<option value="skinner">Skinner Knives</option>
+<option value="kitchen">Kitchen Knives</option>
+<option value="swords">Swords</option>
+<option value="axes">Axes</option>
+<option value="cutlery">Custom Cutlery</option>
+
+</select>
+
+</div>
 <div class="products">
 
 

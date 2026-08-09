@@ -979,3 +979,594 @@ section:nth-of-type(odd){
     }
 
 }
+/* =========================================================
+   PAK KNIVES JAVED BROTHER
+   MOBILE + RESPONSIVE FIX
+   Paste this code at the VERY END of style.css
+========================================================= */
+
+
+/* ================================
+   GLOBAL RESPONSIVE FIX
+================================ */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ================================
+   MAIN CONTAINERS
+================================ */
+
+.container,
+section,
+main {
+    max-width: 100%;
+}
+
+section {
+    width: 100%;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header,
+.header,
+.navbar,
+nav {
+    max-width: 100%;
+}
+
+header img,
+.header img,
+.logo,
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul,
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* ================================
+   PRODUCT GRID
+================================ */
+
+.products-grid,
+.product-grid,
+.cards,
+.card-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    max-width: 100%;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+button,
+.button,
+.btn,
+a.button,
+a.btn {
+    max-width: 100%;
+}
+
+
+/* ================================
+   WHATSAPP FLOATING BUTTON
+================================ */
+
+.whatsapp-float,
+.whatsapp-button,
+.whatsapp-icon {
+    max-width: none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    .container {
+        width: 94%;
+        max-width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    nav ul,
+    .nav-links {
+        gap: 12px;
+    }
+
+    .cards,
+    .product-grid,
+    .products-grid,
+    .card-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    /* ============================
+       CONTAINER
+    ============================ */
+
+    .container {
+        width: 92%;
+        max-width: 92%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+
+    /* ============================
+       HEADER
+    ============================ */
+
+    header {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    header img,
+    .logo img,
+    .header img {
+        max-width: 180px;
+        height: auto;
+    }
+
+
+    /* ============================
+       NAVIGATION
+    ============================ */
+
+    nav {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    nav ul,
+    .nav-links {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px 5px;
+        margin: 0;
+    }
+
+    nav li {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav a {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+
+    /* ============================
+       ALL SECTIONS
+    ============================ */
+
+    section {
+        width: 100%;
+        max-width: 100%;
+        padding: 45px 15px;
+        margin: 0;
+        overflow: hidden;
+    }
+
+
+    /* ============================
+       HEADINGS
+    ============================ */
+
+    h1 {
+        font-size: 30px;
+        line-height: 1.2;
+        word-wrap: break-word;
+    }
+
+    h2 {
+        font-size: 25px;
+        line-height: 1.25;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 19px;
+        line-height: 1.3;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.7;
+        overflow-wrap: break-word;
+    }
+
+
+    /* ============================
+       HERO
+    ============================ */
+
+    .hero {
+        width: 100%;
+        min-height: auto;
+        padding: 45px 15px;
+        overflow: hidden;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+
+    /* ============================
+       PRODUCT GRID
+    ============================ */
+
+    .products-grid,
+    .product-grid,
+    .cards,
+    .card-container {
+        width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin: 0 auto;
+    }
+
+
+    /* ============================
+       CARDS
+    ============================ */
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0 auto;
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+
+    /* ============================
+       PRODUCT IMAGES
+    ============================ */
+
+    .product-card img,
+    .product img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+
+    /* ============================
+       MANUFACTURING PROCESS
+    ============================ */
+
+    .process-grid,
+    .manufacturing-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+
+    /* ============================
+       WHY CHOOSE US
+    ============================ */
+
+    .features,
+    .feature-grid,
+    .why-us-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+
+    /* ============================
+       GALLERY
+    ============================ */
+
+    .gallery,
+    .gallery-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .gallery img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+    /* ============================
+       BANNER IMAGES
+    ============================ */
+
+    .banner,
+    .banner img,
+    .hero-banner,
+    .hero-banner img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+
+    /* ============================
+       CONTACT
+    ============================ */
+
+    .contact,
+    .contact-section,
+    .contact-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .contact-card,
+    .contact-box {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 25px 18px;
+        overflow: hidden;
+    }
+
+    .contact-card p,
+    .contact-box p {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+
+    /* ============================
+       CONTACT BUTTONS
+    ============================ */
+
+    .contact-buttons,
+    .button-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .contact-buttons a,
+    .button-group a,
+    .contact-buttons button,
+    .button-group button {
+        width: 90%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+
+    /* ============================
+       FAQ
+    ============================ */
+
+    .faq,
+    .faq-section,
+    .faq-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .faq-card,
+    .faq-box {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 15px;
+        overflow: hidden;
+    }
+
+
+    /* ============================
+       FOOTER
+    ============================ */
+
+    footer {
+        width: 100%;
+        max-width: 100%;
+        padding: 35px 15px;
+        overflow: hidden;
+    }
+
+    footer p,
+    footer div {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* ============================
+       WHATSAPP FLOATING BUTTON
+    ============================ */
+
+    .whatsapp-float {
+        position: fixed;
+        width: 58px !important;
+        height: 58px !important;
+        right: 15px !important;
+        bottom: 15px !important;
+        z-index: 9999;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .whatsapp-float img {
+        width: 58px !important;
+        height: 58px !important;
+        object-fit: contain;
+    }
+
+    .whatsapp-button {
+        width: 58px !important;
+        height: 58px !important;
+        right: 15px !important;
+        bottom: 15px !important;
+        font-size: 0;
+        padding: 0;
+        border-radius: 50%;
+    }
+
+
+    /* ============================
+       SEARCH
+    ============================ */
+
+    #productSearch {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px;
+    }
+
+    #categoryFilter {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+    }
+
+
+    /* ============================
+       HORIZONTAL FIX
+    ============================ */
+
+    .row,
+    .flex,
+    .content,
+    .main-content {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    iframe,
+    video {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media screen and (max-width: 380px) {
+
+    section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .whatsapp-float,
+    .whatsapp-button {
+        width: 52px !important;
+        height: 52px !important;
+        right: 10px !important;
+        bottom: 10px !important;
+    }
+
+}

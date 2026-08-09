@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Products | Pak Knives Javed Brother</title>
 
 <meta name="description" content="Explore handmade Damascus steel knives, folding knives, hunting knives, Bowie knives, swords, axes and custom cutlery from Pak Knives Javed Brother, Wazirabad Pakistan.">
+<meta name="keywords" content="Damascus knives Pakistan, Wazirabad knives, hunting knives, folding knives, Bowie knives, dagger knives, skinner knives, kitchen knives, swords, axes, custom cutlery">
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <header>
-
 <div class="logo">
-<h2>PAK KNIVES<br>JAVED BROTHER</h2>
+<a href="index.html" aria-label="Pak Knives Javed Brother Home">
+<img src="images/logo.png" alt="Pak Knives Javed Brother Logo">
+</a>
 </div>
 
 <nav>
@@ -30,46 +29,31 @@
 <a href="index.html#manufacturing">Manufacturing</a>
 <a href="contact.html">Contact</a>
 </nav>
-
 </header>
 
-
 <section class="hero">
-
-<div class="hero-content">
-
-<h4>OUR COLLECTION</h4>
-
-<h1>PREMIUM PRODUCTS</h1>
-
-<p>
-Handmade Damascus Steel Products Manufactured
-in Wazirabad, Pakistan.
-</p>
-
+<div class="hero-banners" aria-label="Pak Knives Javed Brother banners">
+<img src="images/banner1.jpg" alt="Pak Knives Javed Brother Damascus steel products" class="hero-banner active">
+<img src="images/banner2.jpg" alt="Pak Knives Javed Brother handmade knives" class="hero-banner">
+<img src="images/banner3.jpg" alt="Pak Knives Javed Brother manufacturer and exporter" class="hero-banner">
 </div>
 
+<div class="hero-content">
+<h4>OUR COLLECTION</h4>
+<h1>PREMIUM PRODUCTS</h1>
+<p>Handmade Damascus Steel Products Manufactured in Wazirabad, Pakistan.</p>
+</div>
 </section>
 
-
 <section id="products">
-
 <h2>Product Categories</h2>
-<!-- PRODUCT SEARCH -->
+<div class="gold-line"></div>
 
 <div class="product-tools">
-
-<input
-type="text"
-id="productSearch"
-placeholder="Search products..."
-onkeyup="searchProducts()"
->
+<input type="text" id="productSearch" placeholder="Search products..." onkeyup="searchProducts()">
 
 <select id="categoryFilter" onchange="filterProducts()">
-
 <option value="all">All Categories</option>
-
 <option value="damascus">Damascus Knives</option>
 <option value="folding">Folding Knives</option>
 <option value="hunting">Hunting Knives</option>
@@ -80,261 +64,210 @@ onkeyup="searchProducts()"
 <option value="swords">Swords</option>
 <option value="axes">Axes</option>
 <option value="cutlery">Custom Cutlery</option>
-
 </select>
-
 </div>
+
 <div class="products">
 
-
-<div class="card">
-
+<div class="card product-card" data-category="damascus" data-name="Damascus Knives">
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/damascus-knives.jpg" alt="Damascus Knives" loading="lazy">
 </div>
-
 <h3>Damascus Knives</h3>
-
 <p>Handmade Damascus Steel Knives.</p>
-
 <p><strong>Material:</strong> Damascus Steel</p>
-
 <p><strong>Size:</strong> Custom Available</p>
-
 <a href="product.html" class="button">View Product</a>
-
 </div>
 
-
-<div class="card">
-
+<div class="card product-card" data-category="folding" data-name="Folding Knives">
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/folding-knife.jpg" alt="Folding Knives" loading="lazy">
 </div>
-
 <h3>Folding Knives</h3>
-
 <p>Premium Folding Knife Collection.</p>
-
 <p><strong>Material:</strong> Damascus / D2 Steel</p>
-
 <p><strong>Size:</strong> Custom Available</p>
-
 <a href="product.html" class="button">View Product</a>
-
 </div>
 
-
-<div class="card">
-
+<div class="card product-card" data-category="hunting" data-name="Hunting Knives">
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/hunting-knife.jpg" alt="Hunting Knives" loading="lazy">
 </div>
-
 <h3>Hunting Knives</h3>
-
 <p>Heavy Duty Handmade Hunting Knives.</p>
-
 <p><strong>Material:</strong> Damascus / Carbon Steel</p>
-
 <p><strong>Handle:</strong> Wood / Custom</p>
-
 <a href="product.html" class="button">View Product</a>
-
 </div>
 
-
-<div class="card">
-
+<div class="card product-card" data-category="bowie" data-name="Bowie Knives">
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/damascus-bowie.jpg" alt="Bowie Knives" loading="lazy">
 </div>
-
 <h3>Bowie Knives</h3>
-
 <p>Premium Handmade Bowie Knives.</p>
-
 <p><strong>Material:</strong> Damascus Steel</p>
-
 <p><strong>Sheath:</strong> Leather</p>
-
 <a href="product.html" class="button">View Product</a>
-
 </div>
 
-
-<div class="card">
-
+<div class="card product-card" data-category="dagger" data-name="Dagger Knives">
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/dagger.jpg" alt="Dagger Knives" loading="lazy">
 </div>
-
 <h3>Dagger Knives</h3>
-
-<p>Handmade Damascus & Steel Daggers.</p>
-
+<p>Handmade Damascus &amp; Steel Daggers.</p>
 <p><strong>Material:</strong> Damascus / Carbon Steel</p>
-
 <p><strong>Cover:</strong> Leather / Custom</p>
-
 <a href="product.html" class="button">View Product</a>
-
 </div>
 
-
-<div class="card">
-
+<div class="card product-card" data-category="skinner" data-name="Skinner Knives">
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/skinner.jpg" alt="Skinner Knives" loading="lazy">
 </div>
-
 <h3>Skinner Knives</h3>
-
 <p>Professional Skinner Knife Collection.</p>
-
 <p><strong>Material:</strong> Damascus / D2 Steel</p>
-
 <p><strong>Sheath:</strong> Leather</p>
-
 <a href="product.html" class="button">View Product</a>
-
 </div>
 
-
-<div class="card">
-
+<div class="card product-card" data-category="kitchen" data-name="Kitchen Knives">
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/kitchen-knife.jpg" alt="Kitchen Knives" loading="lazy">
 </div>
-
 <h3>Kitchen Knives</h3>
-
 <p>Chef and Kitchen Knife Collection.</p>
-
 <p><strong>Material:</strong> Stainless / Damascus</p>
-
 <p><strong>Finish:</strong> Custom</p>
-
 <a href="product.html" class="button">View Product</a>
-
 </div>
 
-
-<div class="card">
-
+<div class="card product-card" data-category="swords" data-name="Swords">
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/sword.jpg" alt="Swords" loading="lazy">
 </div>
-
 <h3>Swords</h3>
-
-<p>Handmade Damascus & Steel Swords.</p>
-
+<p>Handmade Damascus &amp; Steel Swords.</p>
 <p><strong>Material:</strong> Damascus / Carbon Steel</p>
-
 <p><strong>Length:</strong> Custom Available</p>
-
 <a href="product.html" class="button">View Product</a>
-
 </div>
 
-
-<div class="card">
-
+<div class="card product-card" data-category="axes" data-name="Axes">
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/axe.jpg" alt="Axes" loading="lazy">
 </div>
-
 <h3>Axes</h3>
-
 <p>Hand Forged High Carbon Steel Axes.</p>
-
 <p><strong>Material:</strong> High Carbon Steel</p>
-
 <p><strong>Handle:</strong> Hardwood</p>
-
 <a href="product.html" class="button">View Product</a>
-
 </div>
 
-
-<div class="card">
-
+<div class="card product-card" data-category="cutlery" data-name="Custom Cutlery">
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/cutlery.jpg" alt="Custom Cutlery" loading="lazy">
 </div>
-
 <h3>Custom Cutlery</h3>
-
 <p>Knives, Spoons and Custom Tableware.</p>
-
 <p><strong>Material:</strong> Stainless / Damascus</p>
-
 <p><strong>Design:</strong> OEM Available</p>
-
 <a href="contact.html" class="button">Request Quote</a>
-
 </div>
 
 </div>
-
 </section>
 
-
 <section>
-
-<h2>Custom & OEM Manufacturing</h2>
-
+<h2>Custom &amp; OEM Manufacturing</h2>
+<div class="gold-line"></div>
 <p style="text-align:center;max-width:950px;margin:auto;">
-
 We manufacture products according to customer requirements.
 You can provide your required material, dimensions, handle
 material, cover or sheath, finishing, packaging and quantity.
-
 </p>
 
 <br>
 
 <div style="text-align:center;">
-
-<a href="contact.html" class="button">
-Send Your Requirement
-</a>
-
+<a href="contact.html" class="button">Send Your Requirement</a>
 </div>
-
 </section>
 
-
 <footer>
-
 <h2>Pak Knives Javed Brother</h2>
-
-<p>Premium Handmade Damascus Steel Manufacturer & Exporter</p>
-
-<p>Email: ujaved7786@gmail.com</p>
-
-<p>WhatsApp: +92 321 713 6284</p>
-
+<p>Premium Handmade Damascus Steel Manufacturer &amp; Exporter</p>
+<p>Email: <a href="mailto:ujaved7786@gmail.com">ujaved7786@gmail.com</a></p>
+<p>WhatsApp: <a href="https://wa.me/923217136284" target="_blank">+92 321 713 6284</a></p>
 <p>Nizamabad, Wazirabad, Punjab, Pakistan</p>
-
 <p>© 2026 Pak Knives Javed Brother. All Rights Reserved.</p>
-
 </footer>
 
-
-<a
-href="https://wa.me/923217136284"
-class="whatsapp"
-target="_blank"
-aria-label="Contact us on WhatsApp">
-
-<img
-src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
-alt="WhatsApp">
-
+<a href="https://wa.me/923217136284" class="whatsapp" target="_blank" aria-label="Contact us on WhatsApp">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
-</body>
+<script src="script.js"></script>
 
+<script>
+(function () {
+  const banners = document.querySelectorAll(".hero-banner");
+  if (banners.length < 2) return;
+
+  let current = 0;
+  setInterval(function () {
+    banners[current].classList.remove("active");
+    current = (current + 1) % banners.length;
+    banners[current].classList.add("active");
+  }, 5000);
+})();
+
+function searchProducts() {
+  const search = document.getElementById("productSearch").value.toLowerCase().trim();
+  const cards = document.querySelectorAll(".product-card");
+
+  cards.forEach(function(card) {
+    const name = card.getAttribute("data-name").toLowerCase();
+    card.style.display = name.includes(search) ? "" : "none";
+  });
+}
+
+function filterProducts() {
+  const category = document.getElementById("categoryFilter").value;
+  const cards = document.querySelectorAll(".product-card");
+  const search = document.getElementById("productSearch").value.toLowerCase().trim();
+
+  cards.forEach(function(card) {
+    const matchesCategory = category === "all" || card.getAttribute("data-category") === category;
+    const matchesSearch = card.getAttribute("data-name").toLowerCase().includes(search);
+    card.style.display = matchesCategory && matchesSearch ? "" : "none";
+  });
+}
+</script>
+
+<!--
+FUTURE PRODUCT IMAGES
+Upload these files into the images folder when ready:
+
+damascus-knives.jpg
+damascus-hunting.jpg
+damascus-bowie.jpg
+folding-knife.jpg
+hunting-knife.jpg
+dagger.jpg
+skinner.jpg
+kitchen-knife.jpg
+sword.jpg
+axe.jpg
+cutlery.jpg
+
+You can later update product descriptions, materials, sizes,
+handles, sheaths, prices and other details directly in this file.
+-->
+
+</body>
 </html>

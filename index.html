@@ -33,12 +33,9 @@ content="Damascus knives Pakistan, Wazirabad knives, Damascus steel knives, hunt
 <header>
 
 <div class="logo">
-
-<h2>
-PAK KNIVES<br>
-JAVED BROTHER
-</h2>
-
+<a href="#home" aria-label="Pak Knives Javed Brother Home">
+<img src="images/logo.png" alt="Pak Knives Javed Brother Logo">
+</a>
 </div>
 
 
@@ -66,6 +63,12 @@ JAVED BROTHER
 ================================= -->
 
 <section id="home" class="hero">
+
+<div class="hero-banners" aria-label="Pak Knives Javed Brother banners">
+<img src="images/banner1.jpg" alt="Pak Knives Javed Brother Damascus steel products" class="hero-banner active">
+<img src="images/banner2.jpg" alt="Pak Knives Javed Brother handmade knives" class="hero-banner">
+<img src="images/banner3.jpg" alt="Pak Knives Javed Brother manufacturer and exporter" class="hero-banner">
+</div>
 
 <div class="hero-content">
 
@@ -148,7 +151,7 @@ available.
 <div class="card">
 
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/damascus-hunting.jpg" alt="Damascus Hunting Knife" loading="lazy">
 </div>
 
 <h3>Damascus Hunting Knife</h3>
@@ -175,7 +178,7 @@ VIEW DETAILS
 <div class="card">
 
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/damascus-bowie.jpg" alt="Damascus Bowie Knife" loading="lazy">
 </div>
 
 <h3>Damascus Bowie Knife</h3>
@@ -202,7 +205,7 @@ VIEW DETAILS
 <div class="card">
 
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/folding-knife.jpg" alt="Folding Knife" loading="lazy">
 </div>
 
 <h3>Folding Knife</h3>
@@ -229,7 +232,7 @@ VIEW DETAILS
 <div class="card">
 
 <div class="gallery-placeholder">
-<span>PRODUCT IMAGE</span>
+<img src="images/axe.jpg" alt="Hand Forged Axe" loading="lazy">
 </div>
 
 <h3>Hand Forged Axe</h3>
@@ -864,6 +867,20 @@ Pak Knives Javed Brother.
 All Rights Reserved.
 </p>
 
+<!--
+Future product images can be uploaded to the images folder using:
+damascus-hunting.jpg
+damascus-bowie.jpg
+folding-knife.jpg
+hunting-knife.jpg
+dagger.jpg
+skinner.jpg
+kitchen-knife.jpg
+sword.jpg
+axe.jpg
+cutlery.jpg
+-->
+
 </footer>
 
 
@@ -891,6 +908,21 @@ alt="WhatsApp">
 ================================= -->
 
 <script src="script.js"></script>
+
+<script>
+(function () {
+  const banners = document.querySelectorAll(".hero-banner");
+  if (banners.length < 2) return;
+
+  let current = 0;
+
+  setInterval(function () {
+    banners[current].classList.remove("active");
+    current = (current + 1) % banners.length;
+    banners[current].classList.add("active");
+  }, 5000);
+})();
+</script>
 
 
 </body>

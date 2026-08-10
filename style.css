@@ -1,4 +1,3 @@
-جی بھائی۔ یہ پورا نیا style.css ہے۔ پرانا CSS مکمل delete کرکے یہ پورا code paste کریں۔
 /* =========================================================
    PAK KNIVES JAVED BROTHER
    PREMIUM STYLE V4
@@ -1129,5 +1128,386 @@ main {
 
         right: 10px !important;
         bottom: 10px !important;
+    }
+}
+/* =========================================
+   FINAL RESPONSIVE FIX
+   PAK KNIVES JAVED BROTHER
+   MOBILE + TABLET + LAPTOP
+========================================= */
+
+/* Prevent horizontal overflow */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* All images stay inside their containers */
+img {
+    max-width: 100%;
+}
+
+/* =========================================
+   DESKTOP / LAPTOP
+========================================= */
+
+.hero,
+section,
+header,
+footer {
+    max-width: 100%;
+}
+
+.hero-banners {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.hero-banner {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+    .products {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    * {
+        max-width: 100%;
+    }
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 10px;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo img {
+        width: auto;
+        max-width: 180px;
+        height: auto;
+    }
+
+    nav {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    nav a {
+        white-space: nowrap;
+    }
+
+
+    /* =====================================
+       HERO / BANNERS
+    ===================================== */
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .hero-banners {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .hero-banner {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 190px;
+        display: none;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .hero-banner.active {
+        display: block;
+    }
+
+
+    /* =====================================
+       HERO TEXT
+    ===================================== */
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 25px 18px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+        line-height: 1.25;
+        word-wrap: break-word;
+    }
+
+    .hero-content h4 {
+        font-size: 15px;
+    }
+
+    .hero-content p {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.7;
+        word-wrap: break-word;
+    }
+
+
+    /* =====================================
+       ALL SECTIONS
+    ===================================== */
+
+    section {
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        overflow: hidden;
+    }
+
+    section h2 {
+        font-size: 27px;
+        line-height: 1.3;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+
+    /* =====================================
+       PRODUCTS
+    ===================================== */
+
+    .products {
+        width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card h3,
+    .card p {
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* =====================================
+       ABOUT
+    ===================================== */
+
+    .about-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .about-content p {
+        width: 100%;
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+
+
+    /* =====================================
+       BUTTONS
+    ===================================== */
+
+    .button {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================
+       CONTACT
+    ===================================== */
+
+    #contact .products {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    #contact .card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================
+       FAQ
+    ===================================== */
+
+    #faq .card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================
+       FOOTER
+    ===================================== */
+
+    footer {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    footer p,
+    footer h2 {
+        max-width: 100%;
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* =====================================
+       WHATSAPP BUTTON
+    ===================================== */
+
+    .whatsapp {
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        z-index: 9999;
+    }
+
+    .whatsapp img {
+        width: 55px;
+        height: 55px;
+        max-width: 55px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .logo img {
+        max-width: 150px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero-banner {
+        min-height: 170px;
+    }
+
+    .hero-content {
+        padding: 20px 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 18px;
     }
 }

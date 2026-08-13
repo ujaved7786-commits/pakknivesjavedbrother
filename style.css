@@ -1411,3 +1411,107 @@ footer p{
         bottom:10px !important;
     }
 }
+/* =====================================================
+   PRODUCT CATEGORY BUTTONS
+===================================================== */
+
+.product-categories {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.product-categories button {
+    padding: 11px 18px;
+
+    background: #171717;
+    color: #fff;
+
+    border: 1px solid #555;
+    border-radius: 25px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.product-categories button:hover {
+    background: #d4af37;
+    color: #000;
+    border-color: #d4af37;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   PRODUCT CARD
+===================================================== */
+
+.product-card {
+    position: relative;
+}
+
+.product-price {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.product-description {
+    color: #ccc;
+}
+
+
+/* =====================================================
+   NO PRODUCTS
+===================================================== */
+
+.no-products {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.no-products h3 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .product-categories {
+        gap: 7px;
+        padding: 0 5px;
+    }
+
+    .product-categories button {
+        font-size: 12px;
+        padding: 9px 13px;
+    }
+
+    .product-tools {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .product-tools input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}

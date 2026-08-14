@@ -330,19 +330,27 @@ document.addEventListener(
     }
 );
 {
-    name: "Damascus Steel Kitchen Knife Set with Leather Roll Bag",
-    category: "kitchen",
+    id: 5,
+    category: "Kitchen Knives",
+    name: "Damascus Knife Set",
     image: "images/kitchen-01.jpg",
-    blade: "Damascus Steel",
-    handle: "Colourful Wood",
-    size: "14 Overall / 9.5 Blade",
-    size: "9.5 Overall / 5 Blade",
-    size: "8.5 Overall / 4 Blade",
-    size: "9 Overall / 4.5 Blade",
-    size: "10 Overall / 5.5 Blade",
-    size: "10.5 Overall / 6 Blade",
-    size: "11.5 Overall / 7 Blade",
-    size: "12.5 Overall / 7 Blade",
-    price: "99 USD",
-    description: "Set of 9 Custom Made Damascus Steel Chef Knifes Set with Blue Pakka Wood Handle."
+
+    bladeMaterial: "Damascus Steel",
+    handleMaterial: "Colourful Pakka Wood",
+
+    sizes: [
+        'Overall 14" | Blade 9.5"',
+        'Overall 9.5" | Blade 5"',
+        'Overall 8.5" | Blade 4"',
+        'Overall 9" | Blade 4.5"',
+        'Overall 10" | Blade 5.5"',
+        'Overall 10.5" | Blade 6"',
+        'Overall 11.5" | Blade 7"',
+        'Overall 12.5" | Blade 7"'
+    ],
+
+    price: "USD 99",
+
+    description:
+        "Set of 9 Custom Made Damascus Steel Chef Knives with Colourful Pakka Wood Handle and Leather Roll Bag."
 },

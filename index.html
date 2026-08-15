@@ -879,90 +879,34 @@ alt="WhatsApp">
 
 <script src="products.js"></script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const grid = document.getElementById("productGrid");
-    const noProducts = document.getElementById("noProducts");
-    const searchBox = document.getElementById("productSearch");
-    const categoryBox = document.getElementById("productCategory");
-
-    function renderProducts() {
-        if (!grid || typeof products === "undefined") {
-            if (noProducts) {
-                noProducts.style.display = "block";
-                noProducts.textContent = "Products are temporarily unavailable.";
-            }
-            return;
-        }
-
-        const search = searchBox ? searchBox.value.toLowerCase().trim() : "";
-        const category = categoryBox ? categoryBox.value : "all";
-
-        const filtered = products.filter(function (product) {
-            const text = [
-                product.name,
-                product.category,
-                product.bladeMaterial,
-                product.handleMaterial,
-                product.size,
-                product.price,
-                product.description
-            ].join(" ").toLowerCase();
-
-            return (category === "all" || product.category === category) &&
-                   (!search || text.includes(search));
-        });
-
-        grid.innerHTML = filtered.map(function (product) {
-            const categoryLabel = categoryNames[product.category] || product.category;
-            const safeName = product.name.replace(/'/g, "\\'");
-
-            return `
-                <article class="card">
-                    <div class="gallery-placeholder">
-                        <img src="${product.image}" alt="${product.name}" loading="lazy"
-                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Product Image</span>';">
-                    </div>
-
-                    <p style="color:#d4af37;font-size:13px;text-transform:uppercase;letter-spacing:1px;">
-                        ${categoryLabel}
-                    </p>
-
-                    <h3>${product.name}</h3>
-                    <p><strong>Blade / Material:</strong> ${product.bladeMaterial}</p>
-                    <p><strong>Handle:</strong> ${product.handleMaterial}</p>
-                    <p><strong>Size:</strong> ${product.size}</p>
-                    <p><strong>Price:</strong> ${product.price}</p>
-                    <p><strong>Description:</strong> ${product.description}</p>
-
-                    <a class="button" href="#contact" onclick="requestProduct('${safeName}')">
-                        REQUEST QUOTE
-                    </a>
-                </article>
-            `;
-        }).join("");
-
-        if (noProducts) {
-            noProducts.style.display = filtered.length ? "none" : "block";
-        }
-    }
-
-    renderProducts();
-
-    if (searchBox) searchBox.addEventListener("input", renderProducts);
-    if (categoryBox) categoryBox.addEventListener("change", renderProducts);
-});
-
-function requestProduct(productName) {
-    const message = "Hello Pak Knives Javed Brother,%0A%0AI am interested in:%0A" +
-                    encodeURIComponent(productName) +
-                    "%0A%0APlease send me details and quotation.";
-    window.open("https://wa.me/923217136284?text=" + message, "_blank");
-}
-</script>
-
 <script src="script.js"></script>
 
+<script>
+(function () {
+
+    const banners =
+        document.querySelectorAll(".hero-banner");
+
+    if (banners.length < 2) return;
+
+    let current = 0;
+
+    setInterval(function () {
+
+        banners[current].classList.remove("active");
+
+        current =
+            (current + 1) % banners.length;
+
+        banners[current].classList.add("active");
+
+    }, 5000);
+
+})();
+</script>
+
+</body>
+</html>
 <script>
 (function () {
     const banners = document.querySelectorAll(".hero-banner");

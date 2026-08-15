@@ -8,14 +8,13 @@ const products = [
 
     /* =====================================================
        FOLDING KNIVES
-       نیا Folding Knife یہاں copy کرکے add کریں
     ===================================================== */
 
     {
         id: 1,
         category: "Folding Knives",
         name: "Damascus Steel Folding Knife",
-        image: "folding-01.jpg",
+        image: "images/products/folding-01.jpg",
 
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Black Horn & Brass",
@@ -35,7 +34,7 @@ const products = [
         id: 2,
         category: "Daggers",
         name: "Damascus Steel Custom Dagger",
-        image: "dagger-01.jpg",
+        image: "images/products/dagger-01.jpg",
 
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Black Horn with Brass Spacer",
@@ -55,7 +54,7 @@ const products = [
         id: 3,
         category: "Hunting Knives",
         name: "Custom Hunting Knife",
-        image: "hunting-01.jpg",
+        image: "images/products/hunting-01.jpg",
 
         bladeMaterial: "Stainless Steel",
         handleMaterial: "Pakistani Wood",
@@ -75,7 +74,7 @@ const products = [
         id: 4,
         category: "Bowie Knives",
         name: "Custom Bowie Knife",
-        image: "bowie-01.jpg",
+        image: "images/products/bowie-01.jpg",
 
         bladeMaterial: "Carbon Steel",
         handleMaterial: "Wood & Brass",
@@ -88,22 +87,25 @@ const products = [
 
 
     /* =====================================================
-       KITCHEN KNIVES
+       KITCHEN KNIFE SET
     ===================================================== */
 
     {
         id: 5,
         category: "Kitchen Knives",
-        name: "Professional Kitchen Knife",
-        image: "kitchen-01.jpg",
+        name: "Damascus Knife Set",
+        image: "images/products/kitchen-01.jpeg",
 
-        bladeMaterial: "Stainless Steel",
-        handleMaterial: "Wood",
-        size: 'Overall 13" | Blade 8"',
-        price: "USD 30",
+        bladeMaterial: "Damascus Steel",
+        handleMaterial: "Colourful Pakka Wood",
+
+        size:
+            'Set of 9 knives | Sizes: 14", 9.5", 8.5", 9", 10", 10.5", 11.5", 12.5"',
+
+        price: "USD 99",
 
         description:
-            "Handmade kitchen knife suitable for professional and home kitchen use."
+            "Set of 9 Custom Made Damascus Steel Chef Knives with Colourful Pakka Wood Handle and Leather Roll Bag."
     },
 
 
@@ -115,7 +117,7 @@ const products = [
         id: 6,
         category: "Swords",
         name: "Custom Damascus Sword",
-        image: "sword-01.jpg",
+        image: "images/products/sword-01.jpg",
 
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Wood, Brass & Leather",
@@ -135,7 +137,7 @@ const products = [
         id: 7,
         category: "Axes",
         name: "Custom Damascus Axe",
-        image: "axe-01.jpg",
+        image: "images/products/axe-01.jpg",
 
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Hard Wood",
@@ -175,7 +177,6 @@ function displayProducts(productList = products) {
 
         return;
     }
-
 
     productList.forEach(product => {
 
@@ -329,28 +330,3 @@ document.addEventListener(
 
     }
 );
-{
-    id: 5,
-    category: "Kitchen Knives",
-    name: "Damascus Knife Set",
-    image: "images/kitchen-01.jpg",
-
-    bladeMaterial: "Damascus Steel",
-    handleMaterial: "Colourful Pakka Wood",
-
-    sizes: [
-        'Overall 14" | Blade 9.5"',
-        'Overall 9.5" | Blade 5"',
-        'Overall 8.5" | Blade 4"',
-        'Overall 9" | Blade 4.5"',
-        'Overall 10" | Blade 5.5"',
-        'Overall 10.5" | Blade 6"',
-        'Overall 11.5" | Blade 7"',
-        'Overall 12.5" | Blade 7"'
-    ],
-
-    price: "USD 99",
-
-    description:
-        "Set of 9 Custom Made Damascus Steel Chef Knives with Colourful Pakka Wood Handle and Leather Roll Bag."
-},

@@ -39,6 +39,7 @@ const products = [
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Black Horn with Brass Spacer",
         size: 'Overall 14.5" | Blade 9.5" | Handle 5"',
+
         price: "USD 85",
 
         description:
@@ -59,6 +60,7 @@ const products = [
         bladeMaterial: "Stainless Steel",
         handleMaterial: "Pakistani Wood",
         size: 'Overall 9" | Blade 4.5"',
+
         price: "USD 40",
 
         description:
@@ -79,6 +81,7 @@ const products = [
         bladeMaterial: "Carbon Steel",
         handleMaterial: "Wood & Brass",
         size: 'Overall 13" | Blade 8"',
+
         price: "USD 65",
 
         description:
@@ -122,6 +125,7 @@ const products = [
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Wood, Brass & Leather",
         size: 'Overall 30" | Blade 24"',
+
         price: "USD 150",
 
         description:
@@ -142,6 +146,7 @@ const products = [
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Hard Wood",
         size: 'Overall 18" | Head 6"',
+
         price: "USD 75",
 
         description:
@@ -201,6 +206,7 @@ function displayProducts(productList = products) {
         return;
     }
 
+
     productList.forEach(product => {
 
         const card = document.createElement("div");
@@ -214,7 +220,7 @@ function displayProducts(productList = products) {
                 alt="${product.name}"
                 class="card-image"
                 loading="lazy"
-                onerror="this.style.display='none'"
+                onerror="this.src='placeholder.jpg'"
             >
 
             <h3>${product.name}</h3>

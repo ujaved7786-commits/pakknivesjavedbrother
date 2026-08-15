@@ -1,179 +1,104 @@
 /* =========================================================
    PAK KNIVES JAVED BROTHER
    PRODUCTS SYSTEM
-   EASY PRODUCT ADD / EDIT
 ========================================================= */
 
 const products = [
-
-    /* =====================================================
-       FOLDING KNIVES
-    ===================================================== */
 
     {
         id: 1,
         category: "Folding Knives",
         name: "Damascus Steel Folding Knife",
         image: "images/products/folding-01.jpg",
-
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Black Horn & Brass",
         size: 'Overall 8.5" | Blade 3.5"',
         price: "USD 45",
-
-        description:
-            "Handmade folding knife with Damascus steel blade, premium handle and custom finishing."
+        description: "Handmade folding knife with Damascus steel blade, premium handle and custom finishing."
     },
-
-
-    /* =====================================================
-       DAGGERS
-    ===================================================== */
 
     {
         id: 2,
         category: "Daggers",
         name: "Damascus Steel Custom Dagger",
         image: "images/products/dagger-01.jpg",
-
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Black Horn with Brass Spacer",
         size: 'Overall 14.5" | Blade 9.5" | Handle 5"',
-
         price: "USD 85",
-
-        description:
-            "Handmade custom dagger with Damascus steel blade, premium horn handle and genuine leather sheath."
+        description: "Handmade custom dagger with Damascus steel blade, premium horn handle and genuine leather sheath."
     },
-
-
-    /* =====================================================
-       HUNTING KNIVES
-    ===================================================== */
 
     {
         id: 3,
         category: "Hunting Knives",
         name: "Custom Hunting Knife",
         image: "images/products/hunting-01.jpg",
-
         bladeMaterial: "Stainless Steel",
         handleMaterial: "Pakistani Wood",
         size: 'Overall 9" | Blade 4.5"',
-
         price: "USD 40",
-
-        description:
-            "Handmade hunting knife designed for outdoor use with a strong blade and comfortable handle."
+        description: "Handmade hunting knife designed for outdoor use with a strong blade and comfortable handle."
     },
-
-
-    /* =====================================================
-       BOWIE KNIVES
-    ===================================================== */
 
     {
         id: 4,
         category: "Bowie Knives",
         name: "Custom Bowie Knife",
         image: "images/products/bowie-01.jpg",
-
         bladeMaterial: "Carbon Steel",
         handleMaterial: "Wood & Brass",
         size: 'Overall 13" | Blade 8"',
-
         price: "USD 65",
-
-        description:
-            "Handcrafted Bowie knife with a strong carbon steel blade and traditional custom handle."
+        description: "Handcrafted Bowie knife with a strong carbon steel blade and traditional custom handle."
     },
-
-
-    /* =====================================================
-       KITCHEN KNIFE SET
-    ===================================================== */
 
     {
         id: 5,
         category: "Kitchen Knives",
         name: "Damascus Knife Set",
         image: "images/products/kitchen-01.jpeg",
-
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Colourful Pakka Wood",
-
-        size:
-            'Set of 9 knives | Sizes: 14", 9.5", 8.5", 9", 10", 10.5", 11.5", 12.5"',
-
+        size: 'Set of 9 knives | Sizes: 14", 9.5", 8.5", 9", 10", 10.5", 11.5", 12.5"',
         price: "USD 99",
-
-        description:
-            "Set of 9 Custom Made Damascus Steel Chef Knives with Colourful Pakka Wood Handle and Leather Roll Bag."
+        description: "Set of 9 Custom Made Damascus Steel Chef Knives with Colourful Pakka Wood Handle and Leather Roll Bag."
     },
-
-
-    /* =====================================================
-       SWORDS
-    ===================================================== */
 
     {
         id: 6,
         category: "Swords",
         name: "Custom Damascus Sword",
         image: "images/products/sword-01.jpg",
-
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Wood, Brass & Leather",
         size: 'Overall 30" | Blade 24"',
-
         price: "USD 150",
-
-        description:
-            "Handcrafted custom sword with Damascus steel blade and premium traditional finishing."
+        description: "Handcrafted custom sword with Damascus steel blade and premium traditional finishing."
     },
-
-
-    /* =====================================================
-       AXES
-    ===================================================== */
 
     {
         id: 7,
         category: "Axes",
         name: "Custom Damascus Axe",
         image: "images/products/axe-01.jpg",
-
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Hard Wood",
         size: 'Overall 18" | Head 6"',
-
         price: "USD 75",
-
-        description:
-            "Handmade custom axe with Damascus steel head and strong wooden handle."
+        description: "Handmade custom axe with Damascus steel head and strong wooden handle."
     },
-
-
-    /* =====================================================
-       KITCHEN KNIFE SET - ID 8
-    ===================================================== */
 
     {
         id: 8,
         category: "Kitchen Knives",
         name: "Damascus Steel Kitchen Knife Set with Leather Roll Bag",
         image: "images/products/kitchen-01.jpeg",
-
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Colourful Blue Pakka Wood",
-
-        size:
-            'Set of 9 knives | 14" Overall / 9.5" Blade | 9.5" Overall / 5" Blade | 8.5" Overall / 4" Blade | 9" Overall / 4.5" Blade | 10" Overall / 5.5" Blade | 10.5" Overall / 6" Blade | 11.5" Overall / 7" Blade | 12.5" Overall / 7" Blade',
-
+        size: 'Set of 9 knives | 14" Overall / 9.5" Blade | 9.5" Overall / 5" Blade | 8.5" Overall / 4" Blade | 9" Overall / 4.5" Blade | 10" Overall / 5.5" Blade | 10.5" Overall / 6" Blade | 11.5" Overall / 7" Blade | 12.5" Overall / 7" Blade',
         price: "USD 99",
-
-        description:
-            "Set of 9 Custom Made Damascus Steel Chef Knives with Blue Pakka Wood Handle and Leather Roll Bag."
+        description: "Set of 9 Custom Made Damascus Steel Chef Knives with Blue Pakka Wood Handle and Leather Roll Bag."
     }
 
 ];
@@ -185,53 +110,51 @@ const products = [
 
 function displayProducts(productList = products) {
 
-    const container = document.getElementById("product-container");
+    /* IMPORTANT:
+       index.html uses productGrid
+    */
+
+    const container = document.getElementById("productGrid");
 
     if (!container) {
-        console.log("Product container not found.");
+        console.error("ERROR: productGrid not found in index.html");
         return;
     }
 
     container.innerHTML = "";
 
-    if (productList.length === 0) {
+    productList.forEach(function(product) {
 
-        container.innerHTML = `
-            <div class="no-products">
-                <h3>No Products Found</h3>
-                <p>Please select another category.</p>
-            </div>
-        `;
-
-        return;
-    }
-
-
-    productList.forEach(product => {
-
-        const card = document.createElement("div");
+        const card = document.createElement("article");
 
         card.className = "card product-card";
 
         card.innerHTML = `
+            
+            <div class="gallery-placeholder">
 
-            <img
-                src="${product.image}"
-                alt="${product.name}"
-                class="card-image"
-                loading="lazy"
-                onerror="this.src='placeholder.jpg'"
-            >
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    loading="lazy"
+                    onerror="this.style.display='none';"
+                >
+
+            </div>
+
+            <p style="
+                color:#d4af37;
+                font-size:13px;
+                text-transform:uppercase;
+                letter-spacing:1px;
+            ">
+                ${product.category}
+            </p>
 
             <h3>${product.name}</h3>
 
             <p>
-                <strong>Category:</strong>
-                ${product.category}
-            </p>
-
-            <p>
-                <strong>Blade Material:</strong>
+                <strong>Blade / Material:</strong>
                 ${product.bladeMaterial}
             </p>
 
@@ -252,16 +175,17 @@ function displayProducts(productList = products) {
                 </span>
             </p>
 
-            <p class="product-description">
+            <p>
+                <strong>Description:</strong>
                 ${product.description}
             </p>
 
             <a
-                href="#contact"
                 class="button"
-                onclick="requestProduct('${product.name}')"
+                href="#contact"
+                onclick="requestProduct('${product.name.replace(/'/g, "\\'")}')"
             >
-                Request Quote
+                REQUEST QUOTE
             </a>
 
         `;
@@ -269,6 +193,7 @@ function displayProducts(productList = products) {
         container.appendChild(card);
 
     });
+
 }
 
 
@@ -278,20 +203,28 @@ function displayProducts(productList = products) {
 
 function filterProducts(category) {
 
-    if (category === "All" || category === "") {
+    if (
+        category === "All" ||
+        category === "all" ||
+        category === ""
+    ) {
 
         displayProducts(products);
-
         return;
+
     }
 
-    const filteredProducts = products.filter(
-        product =>
+    const filtered = products.filter(function(product) {
+
+        return (
             product.category.toLowerCase() ===
             category.toLowerCase()
-    );
+        );
 
-    displayProducts(filteredProducts);
+    });
+
+    displayProducts(filtered);
+
 }
 
 
@@ -306,44 +239,56 @@ function searchProducts(searchText) {
     if (!text) {
 
         displayProducts(products);
-
         return;
+
     }
 
-    const results = products.filter(product =>
+    const results = products.filter(function(product) {
 
-        product.name.toLowerCase().includes(text) ||
+        const productText = [
 
-        product.category.toLowerCase().includes(text) ||
+            product.name,
+            product.category,
+            product.bladeMaterial,
+            product.handleMaterial,
+            product.size,
+            product.price,
+            product.description
 
-        product.bladeMaterial.toLowerCase().includes(text) ||
+        ].join(" ").toLowerCase();
 
-        product.handleMaterial.toLowerCase().includes(text)
+        return productText.includes(text);
 
-    );
+    });
 
     displayProducts(results);
+
 }
 
 
 /* =========================================================
-   REQUEST PRODUCT
+   REQUEST QUOTE / WHATSAPP
 ========================================================= */
 
 function requestProduct(productName) {
 
-    const message =
-        `Hello Pak Knives Javed Brother,%0A%0A` +
-        `I am interested in:%0A` +
-        `${productName}%0A%0A` +
-        `Please send me details and quotation.`;
+    const message = encodeURIComponent(
+        "Hello Pak Knives Javed Brother,\n\n" +
+        "I am interested in:\n" +
+        productName +
+        "\n\nPlease send me details and quotation."
+    );
 
-    const whatsappNumber = "923XXXXXXXXX";
+    const whatsappNumber = "923217136284";
 
     window.open(
-        `https://wa.me/${whatsappNumber}?text=${message}`,
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        message,
         "_blank"
     );
+
 }
 
 
@@ -353,7 +298,7 @@ function requestProduct(productName) {
 
 document.addEventListener(
     "DOMContentLoaded",
-    function () {
+    function() {
 
         displayProducts(products);
 

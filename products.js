@@ -151,7 +151,7 @@ const products = [
     id: 8,
     category: "Kitchen Knives",
     name: "Damascus Steel Kitchen Knife Set with Leather Roll Bag",
-    image: "images/products/kitchen-01.jpg",
+    image: "images/products/kitchen-01.jpeg",
 
     bladeMaterial: "Damascus Steel",
     handleMaterial: "Colourful Blue Pakka Wood",

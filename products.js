@@ -146,24 +146,31 @@ const products = [
 
         description:
             "Handmade custom axe with Damascus steel head and strong wooden handle."
+    },
+
+
+    /* =====================================================
+       KITCHEN KNIFE SET - ID 8
+    ===================================================== */
+
+    {
+        id: 8,
+        category: "Kitchen Knives",
+        name: "Damascus Steel Kitchen Knife Set with Leather Roll Bag",
+        image: "images/products/kitchen-01.jpeg",
+
+        bladeMaterial: "Damascus Steel",
+        handleMaterial: "Colourful Blue Pakka Wood",
+
+        size:
+            'Set of 9 knives | 14" Overall / 9.5" Blade | 9.5" Overall / 5" Blade | 8.5" Overall / 4" Blade | 9" Overall / 4.5" Blade | 10" Overall / 5.5" Blade | 10.5" Overall / 6" Blade | 11.5" Overall / 7" Blade | 12.5" Overall / 7" Blade',
+
+        price: "USD 99",
+
+        description:
+            "Set of 9 Custom Made Damascus Steel Chef Knives with Blue Pakka Wood Handle and Leather Roll Bag."
     }
-{
-    id: 8,
-    category: "Kitchen Knives",
-    name: "Damascus Steel Kitchen Knife Set with Leather Roll Bag",
-    image: "images/products/kitchen-01.jpeg",
 
-    bladeMaterial: "Damascus Steel",
-    handleMaterial: "Colourful Blue Pakka Wood",
-
-    size:
-        'Set of 9 knives | 14" Overall / 9.5" Blade | 9.5" Overall / 5" Blade | 8.5" Overall / 4" Blade | 9" Overall / 4.5" Blade | 10" Overall / 5.5" Blade | 10.5" Overall / 6" Blade | 11.5" Overall / 7" Blade | 12.5" Overall / 7" Blade',
-
-    price: "USD 99",
-
-    description:
-        "Set of 9 Custom Made Damascus Steel Chef Knives with Blue Pakka Wood Handle and Leather Roll Bag."
-},
 ];
 
 
@@ -207,7 +214,7 @@ function displayProducts(productList = products) {
                 alt="${product.name}"
                 class="card-image"
                 loading="lazy"
-                onerror="this.src='placeholder.jpg'"
+                onerror="this.style.display='none'"
             >
 
             <h3>${product.name}</h3>

@@ -802,165 +802,29 @@ alt="WhatsApp">
      JAVASCRIPT
 ================================= -->
 
-
-<script>
-/*
-=========================================================
-PAK KNIVES JAVED BROTHER - EASY PRODUCT SYSTEM
-=========================================================
-HOW TO ADD A PRODUCT:
-Copy one product block inside the products array and change:
-name, category, image, blade, handle, size, price, description.
-
-Category values:
-folding, dagger, hunting, bowie, skinner, kitchen,
-sword, axe, cutlery
-
-Picture example:
-image: "images/my-product.jpg"
-=========================================================
-*/
-
-const products = [
-    {
-        name: "Damascus Hunting Knife",
-        category: "hunting",
-        image: "images/damascus-hunting.jpg",
-        blade: "Damascus Steel",
-        handle: "Rose Wood",
-        size: "Custom Size",
-        price: "Request Quote",
-        description: "Handmade hunting knife with premium finishing and leather sheath."
-    },
-    {
-        name: "Damascus Bowie Knife",
-        category: "bowie",
-        image: "images/damascus-bowie.jpg",
-        blade: "Damascus Steel",
-        handle: "Walnut / Rose Wood",
-        size: "Custom Size",
-        price: "Request Quote",
-        description: "Handmade Bowie knife available with custom materials and specifications."
-    },
-    {
-        name: "Folding Knife",
-        category: "folding",
-        image: "images/folding-knife.jpg",
-        blade: "Damascus / D2 Steel",
-        handle: "Custom Available",
-        size: "Custom Size",
-        price: "Request Quote",
-        description: "Premium folding knife with customizable blade and handle options."
-    },
-    {
-        name: "Hand Forged Axe",
-        category: "axe",
-        image: "images/axe.jpg",
-        blade: "High Carbon Steel",
-        handle: "Hardwood",
-        size: "Custom Size",
-        price: "Request Quote",
-        description: "Hand forged axe manufactured according to customer requirements."
-    }
-];
-
-const categoryNames = {
-    folding: "Folding Knife",
-    dagger: "Dagger",
-    hunting: "Hunting Knife",
-    bowie: "Bowie Knife",
-    skinner: "Skinner Knife",
-    kitchen: "Kitchen Knife",
-    sword: "Sword",
-    axe: "Axe",
-    cutlery: "Cutlery"
-};
-
-function renderProducts() {
-    const grid = document.getElementById("productGrid");
-    const noProducts = document.getElementById("noProducts");
-    const search = (document.getElementById("productSearch").value || "").toLowerCase().trim();
-    const category = document.getElementById("productCategory").value;
-
-    const filtered = products.filter(product => {
-        const text = [
-            product.name,
-            product.category,
-            product.blade,
-            product.handle,
-            product.size,
-            product.price,
-            product.description
-        ].join(" ").toLowerCase();
-
-        return (category === "all" || product.category === category) &&
-               (!search || text.includes(search));
-    });
-
-    grid.innerHTML = filtered.map(product => `
-        <article class="card">
-            <div class="gallery-placeholder">
-                <img src="${product.image}" alt="${product.name}" loading="lazy"
-                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Product Image</span>';">
-            </div>
-
-            <p style="color:#d4af37;font-size:13px;text-transform:uppercase;letter-spacing:1px;">
-                ${categoryNames[product.category] || product.category}
-            </p>
-
-            <h3>${product.name}</h3>
-
-            <p><strong>Blade / Material:</strong> ${product.blade}</p>
-            <p><strong>Handle:</strong> ${product.handle}</p>
-            <p><strong>Size:</strong> ${product.size}</p>
-            <p><strong>Price:</strong> ${product.price}</p>
-            <p><strong>Description:</strong> ${product.description}</p>
-
-            <a class="button" href="#contact">REQUEST QUOTE</a>
-        </article>
-    `).join("");
-
-    noProducts.style.display = filtered.length ? "none" : "block";
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    renderProducts();
-
-    document.getElementById("productSearch").addEventListener("input", renderProducts);
-    document.getElementById("productCategory").addEventListener("change", renderProducts);
-});
-<!-- =====================================================
-     PRODUCTS SYSTEM
-===================================================== -->
-
 <script src="products.js"></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-
     const grid = document.getElementById("productGrid");
     const noProducts = document.getElementById("noProducts");
     const searchBox = document.getElementById("productSearch");
     const categoryBox = document.getElementById("productCategory");
 
-    if (!grid) {
-        console.log("productGrid not found.");
-        return;
-    }
+    function renderProducts() {
+        if (!grid || typeof products === "undefined") {
+            if (noProducts) {
+                noProducts.style.display = "block";
+                noProducts.textContent = "Products are temporarily unavailable.";
+            }
+            return;
+        }
 
-    function showProducts() {
-
-        const search = searchBox
-            ? searchBox.value.toLowerCase().trim()
-            : "";
-
-        const category = categoryBox
-            ? categoryBox.value
-            : "all";
+        const search = searchBox ? searchBox.value.toLowerCase().trim() : "";
+        const category = categoryBox ? categoryBox.value : "all";
 
         const filtered = products.filter(function (product) {
-
-            const productText = [
+            const text = [
                 product.name,
                 product.category,
                 product.bladeMaterial,
@@ -970,142 +834,74 @@ document.addEventListener("DOMContentLoaded", function () {
                 product.description
             ].join(" ").toLowerCase();
 
-            const categoryMatch =
-                category === "all" ||
-                category === "" ||
-                product.category.toLowerCase() === category.toLowerCase();
-
-            const searchMatch =
-                !search || productText.includes(search);
-
-            return categoryMatch && searchMatch;
+            return (category === "all" || product.category === category) &&
+                   (!search || text.includes(search));
         });
 
-
         grid.innerHTML = filtered.map(function (product) {
+            const categoryLabel = categoryNames[product.category] || product.category;
+            const safeName = product.name.replace(/'/g, "\\'");
 
             return `
                 <article class="card">
-
                     <div class="gallery-placeholder">
-
-                        <img
-                            src="${product.image}"
-                            alt="${product.name}"
-                            loading="lazy"
-                            onerror="this.style.display='none';"
-                        >
-
+                        <img src="${product.image}" alt="${product.name}" loading="lazy"
+                             onerror="this.style.display='none'; this.parentElement.innerHTML='<span>Product Image</span>';">
                     </div>
 
-                    <p style="
-                        color:#d4af37;
-                        font-size:13px;
-                        text-transform:uppercase;
-                        letter-spacing:1px;
-                    ">
-                        ${product.category}
+                    <p style="color:#d4af37;font-size:13px;text-transform:uppercase;letter-spacing:1px;">
+                        ${categoryLabel}
                     </p>
 
                     <h3>${product.name}</h3>
+                    <p><strong>Blade / Material:</strong> ${product.bladeMaterial}</p>
+                    <p><strong>Handle:</strong> ${product.handleMaterial}</p>
+                    <p><strong>Size:</strong> ${product.size}</p>
+                    <p><strong>Price:</strong> ${product.price}</p>
+                    <p><strong>Description:</strong> ${product.description}</p>
 
-                    <p>
-                        <strong>Blade / Material:</strong>
-                        ${product.bladeMaterial}
-                    </p>
-
-                    <p>
-                        <strong>Handle:</strong>
-                        ${product.handleMaterial}
-                    </p>
-
-                    <p>
-                        <strong>Size:</strong>
-                        ${product.size}
-                    </p>
-
-                    <p>
-                        <strong>Price:</strong>
-                        ${product.price}
-                    </p>
-
-                    <p>
-                        <strong>Description:</strong>
-                        ${product.description}
-                    </p>
-
-                    <a
-                        class="button"
-                        href="#contact"
-                        onclick="requestProduct('${product.name.replace(/'/g, "\\'")}')"
-                    >
+                    <a class="button" href="#contact" onclick="requestProduct('${safeName}')">
                         REQUEST QUOTE
                     </a>
-
                 </article>
             `;
-
         }).join("");
 
-
         if (noProducts) {
-            noProducts.style.display =
-                filtered.length ? "none" : "block";
+            noProducts.style.display = filtered.length ? "none" : "block";
         }
     }
 
+    renderProducts();
 
-    showProducts();
-
-
-    if (searchBox) {
-        searchBox.addEventListener("input", showProducts);
-    }
-
-
-    if (categoryBox) {
-        categoryBox.addEventListener("change", showProducts);
-    }
-
+    if (searchBox) searchBox.addEventListener("input", renderProducts);
+    if (categoryBox) categoryBox.addEventListener("change", renderProducts);
 });
+
+function requestProduct(productName) {
+    const message = "Hello Pak Knives Javed Brother,%0A%0AI am interested in:%0A" +
+                    encodeURIComponent(productName) +
+                    "%0A%0APlease send me details and quotation.";
+    window.open("https://wa.me/923217136284?text=" + message, "_blank");
+}
 </script>
-
-
-<!-- =====================================================
-     MAIN WEBSITE JAVASCRIPT
-===================================================== -->
 
 <script src="script.js"></script>
 
-
-<!-- =====================================================
-     HERO BANNER SLIDER
-===================================================== -->
-
 <script>
 (function () {
-
-    const banners =
-        document.querySelectorAll(".hero-banner");
-
+    const banners = document.querySelectorAll(".hero-banner");
     if (banners.length < 2) return;
 
     let current = 0;
 
     setInterval(function () {
-
         banners[current].classList.remove("active");
-
-        current =
-            (current + 1) % banners.length;
-
+        current = (current + 1) % banners.length;
         banners[current].classList.add("active");
-
     }, 5000);
-
 })();
 </script>
-
 
 </body>
 </html>

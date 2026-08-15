@@ -1,28 +1,23 @@
 /* =========================================================
    PAK KNIVES JAVED BROTHER
-   PRODUCTS + SHIPPING SYSTEM
+   FINAL PRODUCTS + CATEGORY + SHIPPING SYSTEM
 ========================================================= */
 
 const products = [
 
-    /* =====================================================
+    /* =========================
        ID 1 - FOLDING KNIFE
-    ===================================================== */
-
+    ========================= */
     {
         id: 1,
-        category: "Folding Knives",
+        category: "folding",
         name: "Damascus Steel Folding Knife",
         image: "images/products/folding-01.jpg",
-
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Black Horn & Brass",
         size: 'Overall 8.5" | Blade 3.5"',
         price: 45,
-
-        description:
-            "Handmade folding knife with Damascus steel blade, premium handle and custom finishing.",
-
+        description: "Handmade folding knife with Damascus steel blade, premium handle and custom finishing.",
         shipping: {
             USA: "",
             Europe: "",
@@ -32,25 +27,19 @@ const products = [
         }
     },
 
-
-    /* =====================================================
+    /* =========================
        ID 2 - DAGGER
-    ===================================================== */
-
+    ========================= */
     {
         id: 2,
-        category: "Daggers",
+        category: "dagger",
         name: "Damascus Steel Custom Dagger",
         image: "images/products/dagger-01.jpg",
-
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Black Horn with Brass Spacer",
         size: 'Overall 14.5" | Blade 9.5" | Handle 5"',
         price: 85,
-
-        description:
-            "Handmade custom dagger with Damascus steel blade, premium horn handle and genuine leather sheath.",
-
+        description: "Handmade custom dagger with Damascus steel blade, premium horn handle and genuine leather sheath.",
         shipping: {
             USA: "",
             Europe: "",
@@ -60,25 +49,19 @@ const products = [
         }
     },
 
-
-    /* =====================================================
+    /* =========================
        ID 3 - HUNTING KNIFE
-    ===================================================== */
-
+    ========================= */
     {
         id: 3,
-        category: "Hunting Knives",
+        category: "hunting",
         name: "Custom Hunting Knife",
         image: "images/products/hunting-01.jpg",
-
         bladeMaterial: "Stainless Steel",
         handleMaterial: "Pakistani Wood",
         size: 'Overall 9" | Blade 4.5"',
         price: 40,
-
-        description:
-            "Handmade hunting knife designed for outdoor use with a strong blade and comfortable handle.",
-
+        description: "Handmade hunting knife designed for outdoor use with a strong blade and comfortable handle.",
         shipping: {
             USA: "",
             Europe: "",
@@ -88,25 +71,19 @@ const products = [
         }
     },
 
-
-    /* =====================================================
+    /* =========================
        ID 4 - BOWIE KNIFE
-    ===================================================== */
-
+    ========================= */
     {
         id: 4,
-        category: "Bowie Knives",
+        category: "bowie",
         name: "Custom Bowie Knife",
         image: "images/products/bowie-01.jpg",
-
         bladeMaterial: "Carbon Steel",
         handleMaterial: "Wood & Brass",
         size: 'Overall 13" | Blade 8"',
         price: 65,
-
-        description:
-            "Handcrafted Bowie knife with a strong carbon steel blade and traditional custom handle.",
-
+        description: "Handcrafted Bowie knife with a strong carbon steel blade and traditional custom handle.",
         shipping: {
             USA: "",
             Europe: "",
@@ -116,27 +93,19 @@ const products = [
         }
     },
 
-
-    /* =====================================================
+    /* =========================
        ID 5 - KITCHEN KNIFE SET
-    ===================================================== */
-
+    ========================= */
     {
         id: 5,
-        category: "Kitchen Knives",
+        category: "kitchen",
         name: "Damascus Knife Set",
         image: "images/products/kitchen-01.jpeg",
-
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Colourful Pakka Wood",
-        size:
-            'Set of 9 knives | Sizes: 14", 9.5", 8.5", 9", 10", 10.5", 11.5", 12.5"',
-
+        size: 'Set of 9 knives | Sizes: 14", 9.5", 8.5", 9", 10", 10.5", 11.5", 12.5"',
         price: 99,
-
-        description:
-            "Set of 9 Custom Made Damascus Steel Chef Knives with Colourful Pakka Wood Handle and Leather Roll Bag.",
-
+        description: "Set of 9 Custom Made Damascus Steel Chef Knives with Colourful Pakka Wood Handle and Leather Roll Bag.",
         shipping: {
             USA: "",
             Europe: "",
@@ -146,25 +115,19 @@ const products = [
         }
     },
 
-
-    /* =====================================================
+    /* =========================
        ID 6 - SWORD
-    ===================================================== */
-
+    ========================= */
     {
         id: 6,
-        category: "Swords",
+        category: "sword",
         name: "Custom Damascus Sword",
         image: "images/products/sword-01.jpg",
-
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Wood, Brass & Leather",
         size: 'Overall 30" | Blade 24"',
         price: 150,
-
-        description:
-            "Handcrafted custom sword with Damascus steel blade and premium traditional finishing.",
-
+        description: "Handcrafted custom sword with Damascus steel blade and premium traditional finishing.",
         shipping: {
             USA: "",
             Europe: "",
@@ -174,25 +137,19 @@ const products = [
         }
     },
 
-
-    /* =====================================================
+    /* =========================
        ID 7 - AXE
-    ===================================================== */
-
+    ========================= */
     {
         id: 7,
-        category: "Axes",
+        category: "axe",
         name: "Custom Damascus Axe",
         image: "images/products/axe-01.jpg",
-
         bladeMaterial: "Damascus Steel",
         handleMaterial: "Hard Wood",
         size: 'Overall 18" | Head 6"',
         price: 75,
-
-        description:
-            "Handmade custom axe with Damascus steel head and strong wooden handle.",
-
+        description: "Handmade custom axe with Damascus steel head and strong wooden handle.",
         shipping: {
             USA: "",
             Europe: "",
@@ -202,36 +159,28 @@ const products = [
         }
     },
 
-
-    /* =====================================================
+    /* =========================
        ID 8 - KITCHEN KNIFE SET
-       SHIPPING RATES WILL BE ADDED LATER
-    ===================================================== */
-
+    ========================= */
     {
         id: 8,
-        category: "Kitchen Knives",
-
-        name:
-            "Damascus Steel Kitchen Knife Set with Leather Roll Bag",
-
-        image:
-            "images/products/kitchen-01.jpeg",
-
-        bladeMaterial:
-            "Damascus Steel",
-
-        handleMaterial:
-            "Colourful Blue Pakka Wood",
-
-        size:
-            'Set of 9 knives | 14" Overall / 9.5" Blade | 9.5" Overall / 5" Blade | 8.5" Overall / 4" Blade | 9" Overall / 4.5" Blade | 10" Overall / 5.5" Blade | 10.5" Overall / 6" Blade | 11.5" Overall / 7" Blade | 12.5" Overall / 7" Blade',
-
+        category: "kitchen",
+        name: "Damascus Steel Kitchen Knife Set with Leather Roll Bag",
+        image: "images/products/kitchen-01.jpeg",
+        bladeMaterial: "Damascus Steel",
+        handleMaterial: "Colourful Blue Pakka Wood",
+        size: 'Set of 9 knives | 14" Overall / 9.5" Blade | 9.5" Overall / 5" Blade | 8.5" Overall / 4" Blade | 9" Overall / 4.5" Blade | 10" Overall / 5.5" Blade | 10.5" Overall / 6" Blade | 11.5" Overall / 7" Blade | 12.5" Overall / 7" Blade',
         price: 99,
+        description: "Set of 9 Custom Made Damascus Steel Chef Knives with Blue Pakka Wood Handle and Leather Roll Bag.",
 
-        description:
-            "Set of 9 Custom Made Damascus Steel Chef Knives with Blue Pakka Wood Handle and Leather Roll Bag.",
-
+        /* SHIPPING RATES
+           Add rates here later.
+           Example:
+           USA: 45,
+           Europe: 35,
+           UAE: 60,
+           Australia: 70
+        */
         shipping: {
             USA: "",
             Europe: "",
@@ -245,7 +194,24 @@ const products = [
 
 
 /* =========================================================
-   COUNTRY NAMES
+   CATEGORY NAMES
+========================================================= */
+
+const categoryNames = {
+    folding: "Folding Knives",
+    dagger: "Daggers",
+    hunting: "Hunting Knives",
+    bowie: "Bowie Knives",
+    skinner: "Skinner Knives",
+    kitchen: "Kitchen Knives",
+    sword: "Swords",
+    axe: "Axes",
+    cutlery: "Cutlery"
+};
+
+
+/* =========================================================
+   SHIPPING COUNTRY NAMES
 ========================================================= */
 
 const shippingCountryNames = {
@@ -263,8 +229,8 @@ const shippingCountryNames = {
 
 function displayProducts(productList = products) {
 
-    const container =
-        document.getElementById("productGrid");
+    const container = document.getElementById("productGrid");
+    const noProducts = document.getElementById("noProducts");
 
     if (!container) {
         console.error("productGrid not found.");
@@ -273,14 +239,30 @@ function displayProducts(productList = products) {
 
     container.innerHTML = "";
 
+    if (productList.length === 0) {
+
+        if (noProducts) {
+            noProducts.style.display = "block";
+        }
+
+        return;
+    }
+
+    if (noProducts) {
+        noProducts.style.display = "none";
+    }
+
 
     productList.forEach(function(product) {
 
-        const card =
-            document.createElement("article");
+        const card = document.createElement("article");
 
-        card.className =
-            "card product-card";
+        card.className = "card product-card";
+
+
+        const categoryLabel =
+            categoryNames[product.category] ||
+            product.category;
 
 
         card.innerHTML = `
@@ -306,7 +288,7 @@ function displayProducts(productList = products) {
                 text-transform:uppercase;
                 letter-spacing:1px;
             ">
-                ${product.category}
+                ${categoryLabel}
             </p>
 
 
@@ -351,7 +333,7 @@ function displayProducts(productList = products) {
 
             <button
                 type="button"
-                class="button"
+                class="button shipping-button"
                 onclick="showShipping(${product.id})"
             >
                 VIEW SHIPPING COST
@@ -377,9 +359,9 @@ function displayProducts(productList = products) {
                 </h4>
 
 
-                <label>
-                    Select Your Country:
-                </label>
+                <p>
+                    Select your destination:
+                </p>
 
 
                 <select
@@ -388,12 +370,16 @@ function displayProducts(productList = products) {
                     style="
                         width:100%;
                         padding:10px;
-                        margin:10px 0;
+                        margin:8px 0;
+                        background:#111;
+                        color:#fff;
+                        border:1px solid #555;
+                        border-radius:5px;
                     "
                 >
 
                     <option value="">
-                        Select Country
+                        Select Country / Region
                     </option>
 
                     <option value="USA">
@@ -431,12 +417,12 @@ function displayProducts(productList = products) {
             <br>
 
 
+            <!-- WHATSAPP -->
+
             <a
                 class="button"
-                href="#contact"
-                onclick="
-                    requestProduct('${product.name.replace(/'/g, "\\'")}')
-                "
+                href="javascript:void(0)"
+                onclick="requestProduct(${product.id})"
             >
                 REQUEST QUOTE
             </a>
@@ -452,7 +438,7 @@ function displayProducts(productList = products) {
 
 
 /* =========================================================
-   SHOW SHIPPING BOX
+   SHOW / HIDE SHIPPING
 ========================================================= */
 
 function showShipping(productId) {
@@ -486,9 +472,7 @@ function calculateShipping(productId) {
 
     const product =
         products.find(function(item) {
-
             return item.id === productId;
-
         });
 
 
@@ -507,6 +491,9 @@ function calculateShipping(productId) {
         );
 
 
+    if (!countryBox || !result) return;
+
+
     const country =
         countryBox.value;
 
@@ -516,7 +503,6 @@ function calculateShipping(productId) {
         result.innerHTML = "";
 
         return;
-
     }
 
 
@@ -524,24 +510,7 @@ function calculateShipping(productId) {
         product.shipping[country];
 
 
-    if (
-        shippingCost === "" ||
-        shippingCost === undefined
-    ) {
-
-        result.innerHTML = `
-
-            <p>
-                <strong>Shipping:</strong>
-                Please contact us for shipping cost.
-            </p>
-
-        `;
-
-        return;
-
-    }
-
+    /* OTHER COUNTRIES */
 
     if (country === "Other") {
 
@@ -551,15 +520,39 @@ function calculateShipping(productId) {
                 <strong>
                     Shipping:
                 </strong>
-                Contact Us
+                Please contact us for shipping cost.
             </p>
 
         `;
 
         return;
-
     }
 
+
+    /* RATE NOT ADDED YET */
+
+    if (
+        shippingCost === "" ||
+        shippingCost === undefined ||
+        shippingCost === null
+    ) {
+
+        result.innerHTML = `
+
+            <p>
+                <strong>
+                    Shipping to ${shippingCountryNames[country]}:
+                </strong>
+                Please contact us for shipping cost.
+            </p>
+
+        `;
+
+        return;
+    }
+
+
+    /* TOTAL */
 
     const total =
         Number(product.price) +
@@ -584,14 +577,18 @@ function calculateShipping(productId) {
 
         <hr>
 
+
         <p style="
             font-size:18px;
             color:#d4af37;
         ">
+
             <strong>
                 Total:
             </strong>
+
             USD ${total}
+
         </p>
 
     `;
@@ -606,25 +603,21 @@ function calculateShipping(productId) {
 function filterProducts(category) {
 
     if (
-        category === "All" ||
         category === "all" ||
+        category === "All" ||
         category === ""
     ) {
 
         displayProducts(products);
 
         return;
-
     }
 
 
     const filtered =
         products.filter(function(product) {
 
-            return (
-                product.category.toLowerCase() ===
-                category.toLowerCase()
-            );
+            return product.category === category;
 
         });
 
@@ -641,7 +634,9 @@ function filterProducts(category) {
 function searchProducts(searchText) {
 
     const text =
-        searchText.toLowerCase().trim();
+        String(searchText || "")
+        .toLowerCase()
+        .trim();
 
 
     if (!text) {
@@ -660,6 +655,7 @@ function searchProducts(searchText) {
 
                 product.name,
                 product.category,
+                categoryNames[product.category],
                 product.bladeMaterial,
                 product.handleMaterial,
                 product.size,
@@ -683,7 +679,16 @@ function searchProducts(searchText) {
    REQUEST QUOTE / WHATSAPP
 ========================================================= */
 
-function requestProduct(productName) {
+function requestProduct(productId) {
+
+    const product =
+        products.find(function(item) {
+            return item.id === productId;
+        });
+
+
+    if (!product) return;
+
 
     const message =
         encodeURIComponent(
@@ -692,9 +697,12 @@ function requestProduct(productName) {
 
             "I am interested in:\n" +
 
-            productName +
+            product.name +
 
-            "\n\nPlease send me details and quotation."
+            "\n\nProduct Price: USD " +
+            product.price +
+
+            "\n\nPlease send me shipping details and quotation."
 
         );
 
@@ -704,21 +712,18 @@ function requestProduct(productName) {
 
 
     window.open(
-
         "https://wa.me/" +
         whatsappNumber +
         "?text=" +
         message,
-
         "_blank"
-
     );
 
 }
 
 
 /* =========================================================
-   LOAD PRODUCTS
+   CONNECT SEARCH + CATEGORY
 ========================================================= */
 
 document.addEventListener(
@@ -727,5 +732,89 @@ document.addEventListener(
 
         displayProducts(products);
 
+
+        const searchBox =
+            document.getElementById("productSearch");
+
+
+        const categoryBox =
+            document.getElementById("productCategory");
+
+
+        function updateProducts() {
+
+            const search =
+                searchBox
+                ? searchBox.value.toLowerCase().trim()
+                : "";
+
+
+            const category =
+                categoryBox
+                ? categoryBox.value
+                : "all";
+
+
+            const filtered =
+                products.filter(function(product) {
+
+                    const productText = [
+
+                        product.name,
+                        product.category,
+                        categoryNames[product.category],
+                        product.bladeMaterial,
+                        product.handleMaterial,
+                        product.size,
+                        product.price,
+                        product.description
+
+                    ].join(" ").toLowerCase();
+
+
+                    const categoryMatch =
+                        category === "all" ||
+                        product.category === category;
+
+
+                    const searchMatch =
+                        !search ||
+                        productText.includes(search);
+
+
+                    return categoryMatch && searchMatch;
+
+                });
+
+
+            displayProducts(filtered);
+
+        }
+
+
+        if (searchBox) {
+
+            searchBox.addEventListener(
+                "input",
+                updateProducts
+            );
+
+        }
+
+
+        if (categoryBox) {
+
+            categoryBox.addEventListener(
+                "change",
+                updateProducts
+            );
+
+        }
+
     }
 );
+<!-- ================================
+     PRODUCTS
+================================= -->
+
+<section id="featured">

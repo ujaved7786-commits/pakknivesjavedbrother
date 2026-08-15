@@ -929,26 +929,183 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("productSearch").addEventListener("input", renderProducts);
     document.getElementById("productCategory").addEventListener("change", renderProducts);
 });
+<!-- =====================================================
+     PRODUCTS SYSTEM
+===================================================== -->
+
+<script src="products.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const grid = document.getElementById("productGrid");
+    const noProducts = document.getElementById("noProducts");
+    const searchBox = document.getElementById("productSearch");
+    const categoryBox = document.getElementById("productCategory");
+
+    if (!grid) {
+        console.log("productGrid not found.");
+        return;
+    }
+
+    function showProducts() {
+
+        const search = searchBox
+            ? searchBox.value.toLowerCase().trim()
+            : "";
+
+        const category = categoryBox
+            ? categoryBox.value
+            : "all";
+
+        const filtered = products.filter(function (product) {
+
+            const productText = [
+                product.name,
+                product.category,
+                product.bladeMaterial,
+                product.handleMaterial,
+                product.size,
+                product.price,
+                product.description
+            ].join(" ").toLowerCase();
+
+            const categoryMatch =
+                category === "all" ||
+                category === "" ||
+                product.category.toLowerCase() === category.toLowerCase();
+
+            const searchMatch =
+                !search || productText.includes(search);
+
+            return categoryMatch && searchMatch;
+        });
+
+
+        grid.innerHTML = filtered.map(function (product) {
+
+            return `
+                <article class="card">
+
+                    <div class="gallery-placeholder">
+
+                        <img
+                            src="${product.image}"
+                            alt="${product.name}"
+                            loading="lazy"
+                            onerror="this.style.display='none';"
+                        >
+
+                    </div>
+
+                    <p style="
+                        color:#d4af37;
+                        font-size:13px;
+                        text-transform:uppercase;
+                        letter-spacing:1px;
+                    ">
+                        ${product.category}
+                    </p>
+
+                    <h3>${product.name}</h3>
+
+                    <p>
+                        <strong>Blade / Material:</strong>
+                        ${product.bladeMaterial}
+                    </p>
+
+                    <p>
+                        <strong>Handle:</strong>
+                        ${product.handleMaterial}
+                    </p>
+
+                    <p>
+                        <strong>Size:</strong>
+                        ${product.size}
+                    </p>
+
+                    <p>
+                        <strong>Price:</strong>
+                        ${product.price}
+                    </p>
+
+                    <p>
+                        <strong>Description:</strong>
+                        ${product.description}
+                    </p>
+
+                    <a
+                        class="button"
+                        href="#contact"
+                        onclick="requestProduct('${product.name.replace(/'/g, "\\'")}')"
+                    >
+                        REQUEST QUOTE
+                    </a>
+
+                </article>
+            `;
+
+        }).join("");
+
+
+        if (noProducts) {
+            noProducts.style.display =
+                filtered.length ? "none" : "block";
+        }
+    }
+
+
+    showProducts();
+
+
+    if (searchBox) {
+        searchBox.addEventListener("input", showProducts);
+    }
+
+
+    if (categoryBox) {
+        categoryBox.addEventListener("change", showProducts);
+    }
+
+});
 </script>
+
+
+<!-- =====================================================
+     MAIN WEBSITE JAVASCRIPT
+===================================================== -->
 
 <script src="script.js"></script>
 
+
+<!-- =====================================================
+     HERO BANNER SLIDER
+===================================================== -->
+
 <script>
 (function () {
-  const banners = document.querySelectorAll(".hero-banner");
-  if (banners.length < 2) return;
 
-  let current = 0;
+    const banners =
+        document.querySelectorAll(".hero-banner");
 
-  setInterval(function () {
-    banners[current].classList.remove("active");
-    current = (current + 1) % banners.length;
-    banners[current].classList.add("active");
-  }, 5000);
+    if (banners.length < 2) return;
+
+    let current = 0;
+
+    setInterval(function () {
+
+        banners[current].classList.remove("active");
+
+        current =
+            (current + 1) % banners.length;
+
+        banners[current].classList.add("active");
+
+    }, 5000);
+
 })();
 </script>
 
 
 </body>
-
 </html>
